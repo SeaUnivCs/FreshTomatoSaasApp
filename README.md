@@ -1,4 +1,6 @@
-FreshTomatoSaasApp
+Fresh Tomato Saas App
 ==================
 
-Class proj - Team1
+Class proj - Team2
+
+Let's get saassy ! 
