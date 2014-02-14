@@ -1,19 +1,13 @@
 <html>
 <head>
-<title>SeaUniv Ruby on Rails</title>
+<title> My first Saas</title>
 </head>
+
 <body>
-<<<<<<< HEAD
 <<<<<<< HEAD
 	<h1>This is my first SaaS APP ! Whatever you want to put here ...... </h1>
 =======
- <h1>This is my first SaaS APP ! Whatever you want to put here....
-EVERYTHING IS AWESOME!!!....</h1>
->>>>>>> 976eeb34d242f97101a3f2b9ad2a15cf66b3e4f1
+<h1> SOmething. bleh</h1>
+>>>>>>> 4ce1d0d5f5261743188a9a32f95e9ffdd864f9ea
 </body>
 </html>
-=======
-<h1>This is my first Saas APP ! Whatever you want to put here ...... </h1>
-</body>
-</html>
->>>>>>> 62af8f9783a888b0b2c3250b0ac452f97f40ef73
