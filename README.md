@@ -1,6 +1,6 @@
 Fresh Tomato Saas App
 ==================
 
-Class proj - Team2
+Master page
 
 Let's get saassy ! 
