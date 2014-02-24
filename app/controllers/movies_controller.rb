@@ -6,8 +6,8 @@ class MoviesController < ApplicationController
   
   # Show a single movie page
   def show
-  	id = params[:id]
-  	@movie = Movie.find(id)
+    id = params[:id]
+    @movie = Movie.find(id)
   end
   
   # Show the edit form for a movie

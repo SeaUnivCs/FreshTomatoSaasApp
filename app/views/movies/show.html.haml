@@ -1,0 +1,17 @@
+-# app/views/movies/show.html.haml
+
+%h2 #{@movie.title}
+
+%ul#details
+  %li
+    Rating:
+    = @movie.rating
+  %li
+    Released on:
+    = @movie.released_date.strftime("%B %d, %Y")
+
+%h3 Description
+
+%p#description= @movie.description
+
+= link_to 'Return to movie list', movies_path
