@@ -35,7 +35,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 # Use HAML templating system
-gem 'haml'
+gem 'haml', '~> 4.0.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
