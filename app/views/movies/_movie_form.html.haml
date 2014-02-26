@@ -1,6 +1,14 @@
 -# _movie_form.html.haml
 -# Partial to render movie form
 
+-# Output error messages if they occur
+- unless @movie.errors.empty?
+  #warning
+    Errors prevented this movie from being #{controller.action_name}d:
+    %ul
+      - @movie.errors.full_messages.each do |error|
+        %li= error
+
 = label :movie, :title, 'Title'
 = text_field :movie, 'title'
 
