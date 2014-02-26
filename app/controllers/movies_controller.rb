@@ -6,14 +6,19 @@ class MoviesController < ApplicationController
 
   # Show the new movie form
   def new
-    # calls new.html.haml by default
+    @movie = Movie.new
   end
   
-  # Create a new movie with given info from 'new' form
+  # Create a new movie with given info from 'new' form and
+  # redirect to movies page on success.
   def create
-    @movie = Movie.create!(params[:movie])
-    flash[:notice] = "Created #{@movie.title}!"
-    redirect_to movies_path
+    @movie = Movie.new(params[:movie])
+    if @movie.save
+      flash[:notice] = "#{@movie.title} created successfully!"
+      redirect_to movies_path
+    else
+      render 'new' # note, 'new' template can access @movie's field values!
+    end
   end
 
   # Show a single movie page
@@ -27,15 +32,19 @@ class MoviesController < ApplicationController
     @movie = Movie.find params[:id]
   end
 
-  # Update a movie with given info from 'edit' form
+  # Update a movie with given info from 'edit' form and redirect
+  # to the movie's page.
   def update
     @movie = Movie.find params[:id]
-    @movie.update_attributes!(params[:movie])
-    flash[:notice] = "Updated '#{@movie.title}' successfully!"
-    redirect_to movie_path(@movie)
+    if @movie.update_attributes(params[:movie])
+      flash[:notice] = "Updated '#{@movie.title}' successfully!"
+      redirect_to movie_path(@movie)
+    else
+      render 'edit' # note, 'edit' template can access @movie's field values!
+    end
   end
 
-  # Delete a movie
+  # Delete a movie and redirect to the movies page.
   def destroy
     @movie = Movie.find params[:id]
     @movie.destroy
