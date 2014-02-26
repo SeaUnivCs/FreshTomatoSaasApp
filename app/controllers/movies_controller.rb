@@ -17,7 +17,8 @@ class MoviesController < ApplicationController
       flash[:notice] = "#{@movie.title} created successfully!"
       redirect_to movies_path
     else
-      render 'new' # note, 'new' template can access @movie's field values!
+      # Create failed; re-render the form
+      render 'new'
     end
   end
 
@@ -40,7 +41,8 @@ class MoviesController < ApplicationController
       flash[:notice] = "Updated '#{@movie.title}' successfully!"
       redirect_to movie_path(@movie)
     else
-      render 'edit' # note, 'edit' template can access @movie's field values!
+      # Update failed; re-render the form
+      render 'edit'
     end
   end
 
