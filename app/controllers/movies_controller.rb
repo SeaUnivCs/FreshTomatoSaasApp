@@ -32,7 +32,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find params[:id]
     @movie.update_attributes!(params[:movie])
     flash[:notice] = "Updated '#{@movie.title}' successfully!"
-    redirect_to_movie_path(@movie)
+    redirect_to movie_path(@movie)
   end
 
   # Delete a movie
