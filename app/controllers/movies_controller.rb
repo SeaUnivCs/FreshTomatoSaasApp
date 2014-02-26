@@ -3,7 +3,19 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
   end
+
+  # Show the new movie form
+  def new
+    # calls new.html.haml by default
+  end
   
+  # Create a new movie with given info from 'new' form
+  def create
+    @movie = Movie.create!(params[:movie])
+    flash[:notice] = "Created #{@movie.title}!"
+    redirect_to movies_path
+  end
+
   # Show a single movie page
   def show
     id = params[:id]
@@ -15,7 +27,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find params[:id]
   end
 
-  # Update a movie given info from edit form
+  # Update a movie with given info from 'edit' form
   def update
     @movie = Movie.find params[:id]
     @movie.update_attributes!(params[:movie])
