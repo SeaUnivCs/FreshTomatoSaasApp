@@ -14,10 +14,9 @@
 
   %p#description= @movie.description
 
-  = link_to "Edit", edit_movie_path(@movie)
-
-  = link_to "Delete", movie_path(@movie), :method => :delete
-
-  = link_to "Return to movie list", movies_path
+  #footer-links
+    = link_to "Edit", edit_movie_path(@movie)
+    = link_to "Delete", movie_path(@movie), :method => :delete
+    = link_to "Return to movie list", movies_path
 - else
   %h2 "Whoops! No movie here."
