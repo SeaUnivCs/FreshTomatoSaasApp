@@ -1,4 +1,11 @@
 - if defined? @movie
+  :javascript
+    $(document).ready(function() {
+      $('#delete-link').click(function (event) {
+        alert('Hooray!');
+        event.preventDefault(); // Prevent link from following its href
+      });
+    });
   %h2 Details about "#{@movie.title}"
   %ul#details
     %li
@@ -16,6 +23,9 @@
   %h2 No movie detail info
  
 = link_to 'Back to movie list', movies_path
+%br
+-#This link wil do a 'DELETE' request to the controller only if the user confirmed deletion
+= link_to 'Delete', @movie.id.to_s, :method => :delete, :confirm => "Are you sure you want to delete the movie?"
 
 /
   = debug(@movie)
