@@ -12,6 +12,8 @@
       = @movie.release_date.strftime("%B %d, %Y")
   %h4 Description:
   %p#description= @movie.description
+  %hr
+  %p= link_to "[Delete \"#{@movie.title}\"]", movie_path(@movie), :method => :delete, confirm: "are you sure?"
 - else
   %h2 No movie detail info
   
