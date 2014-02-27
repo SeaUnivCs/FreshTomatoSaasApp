@@ -41,7 +41,7 @@ class MoviesController < ApplicationController
       flash[:notice] = "#{@movie.title} was successfully updated."
       redirect_to movie_path(@movie)
     else
-      render 'edit' # note, 'edit' template can access @movie's field values!
+      render 'edit'
     end
   end
 
