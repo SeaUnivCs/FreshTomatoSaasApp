@@ -67,9 +67,16 @@ table#movies th, table#movies td {
   text-align: left;
 }
 #notice, #warning {
-  background: #FFC0CB;
   margin: 1em 0;
   padding: 4px;
+}
+#notice {
+  background: #F1F8EB;
+  border:1px solid #7AC142;
+}
+#warning {
+  background: #FFC0CB;
+  border:1px solid red;
 }
 form label {
   display: block;
