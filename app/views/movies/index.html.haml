@@ -1,16 +1,18 @@
-%h1 All Movies
+%h2 All Movies
 
-%table#movies
+%table#movies{:border => 1, :width => "100%"}
   %thead
     %tr
       %th Movie Title
       %th Rating
       %th Release Date
       %th Movie Details
+      %th Delete?
   %tbody
     - @movies.each do |movie|
       %tr
         %td= movie.title 
         %td= movie.rating
         %td= movie.release_date
-        %td= link_to "Click to see the details of \"#{movie.title}\" ...", movie_path(movie)
+        %td= link_to "Click to see the details of \"#{movie.title}\"", movie_path(movie)
+        %td= link_to "Delete \"#{movie.title}\"?", movie_path(movie), :method => :delete

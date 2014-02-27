@@ -8,4 +8,8 @@ class MoviesController < ApplicationController
 		@movie = Movie.find(params[:id])
 		logger.debug("MoviesController Show =================== #{params.inspect}")
 	end
+	def destroy
+		@movie = Movie.destroy(params[:id])
+		logger.debug("MoviesController Destroy =================== #{params.inspect}")
+	end
 end
