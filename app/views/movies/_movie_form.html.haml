@@ -16,4 +16,4 @@
 = select :movie, :rating, Movie.all_ratings
 
 = label :movie, :release_date, 'Released On'
-= date_select :movie, :release_date
+= date_select :movie, :release_date, {start_year: 30.years.ago.year, end_year: Date.today.year, Default: Date.today}
