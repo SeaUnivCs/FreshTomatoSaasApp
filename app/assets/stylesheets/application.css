@@ -84,6 +84,9 @@ form label {
   font-weight: bold;
   color: #182e4f;
 }
+input[type="text"] {
+  width: 300px;
+}
 input[type="submit"] {
   display: block;
 }
