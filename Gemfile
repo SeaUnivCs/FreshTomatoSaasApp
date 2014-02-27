@@ -1,3 +1,13 @@
+gem 'devise', '3.0.0.rc' 
+gem 'protected_attributes'
+
+# use Haml for templates
+gem 'haml'
+# use Ruby debugger
+group :development, :test do
+  gem 'debugger'
+end
+
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

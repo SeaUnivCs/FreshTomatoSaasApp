@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FreshTomato::Application.load_tasks
+Myrottenpotatoes::Application.load_tasks
