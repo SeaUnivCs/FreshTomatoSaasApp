@@ -3,3 +3,5 @@
 = form_tag movies_path, :method => :post do
   = render :partial => 'movie_form'
   = submit_tag 'Save'
+
+= link_to "Return to movies list", movies_path
