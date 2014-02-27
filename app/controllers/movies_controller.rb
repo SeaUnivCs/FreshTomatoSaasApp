@@ -12,12 +12,12 @@ class MoviesController < ApplicationController
   # Create a new movie with given info from 'new' form and
   # redirect to movies page on success.
   def create
-    @movie = Movie.new(params[:movie])
+    @movie = Movie.new(movie_params)
     if @movie.save
-      flash[:notice] = "#{@movie.title} created successfully!"
+      flash[:notice] = "#{@movie.title} was successfully created."
       redirect_to movies_path
     else
-      # Create failed; re-render the form
+      # Create failed, re-render the form
       render 'new'
     end
   end
@@ -37,12 +37,11 @@ class MoviesController < ApplicationController
   # to the movie's page.
   def update
     @movie = Movie.find params[:id]
-    if @movie.update_attributes(params[:movie])
-      flash[:notice] = "Updated '#{@movie.title}' successfully!"
+    if @movie.update_attributes(movie_params)
+      flash[:notice] = "#{@movie.title} was successfully updated."
       redirect_to movie_path(@movie)
     else
-      # Update failed; re-render the form
-      render 'edit'
+      render 'edit' # note, 'edit' template can access @movie's field values!
     end
   end
 
@@ -52,5 +51,11 @@ class MoviesController < ApplicationController
     @movie.destroy
     flash[:notice] = "Deleted '#{@movie.title}'."
     redirect_to movies_path
+  end
+
+  # Define movie parameters for validation
+  private
+  def movie_params
+    params.require(:movie).permit(:title, :rating, :release_date)
   end
 end

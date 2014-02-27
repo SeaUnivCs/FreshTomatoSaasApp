@@ -5,10 +5,10 @@ class Movie < ActiveRecord::Base
   # Validate model fields
   validates :title, :presence => true
   validates :release_date, :presence => true
-  validate :released_1930_or_later # use custom validator
+  validate :released_1930_or_later # uses custom validator below
   validates :rating, :inclusion => {:in => Movie.all_ratings},
-  :unless => :grandfathered?
-  
+    :unless => :grandfathered?
+
   # Check that release date is greater than Jan 1, 1930.
   # Set error if otherwise.
   def released_1930_or_later
