@@ -7,7 +7,6 @@
       %th Movie Title
       %th Rating
       %th Release Date
-      %th Description
       %th More Info
   %tbody
     - @movies.each do |movie|
@@ -15,7 +14,6 @@
         %td= movie.title 
         %td= movie.rating
         %td= movie.release_date.strftime("%B %d, %Y")
-        %td= movie.description
         %td= link_to "Details", movie_path(movie)
         
 #footer-links
