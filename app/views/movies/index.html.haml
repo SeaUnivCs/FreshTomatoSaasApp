@@ -7,6 +7,7 @@
       %th Rating
       %th Release Date
       %th Movie Details
+      %th Edit
       %th Delete?
   %tbody
     - @movies.each do |movie|
@@ -15,6 +16,7 @@
         %td= movie.rating
         %td= movie.release_date
         %td= link_to "Click to see the details of \"#{movie.title}\"", movie_path(movie)
+        %td= link_to '   Edit this movie   ', edit_movie_path(movie), :method => :get
         %td= link_to "[Delete \"#{movie.title}\"]", movie_path(movie), :method => :delete, confirm: "are you sure?"
 
 = link_to 'Add a new movie', new_movie_path
