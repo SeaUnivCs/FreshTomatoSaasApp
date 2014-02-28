@@ -1,0 +1,6 @@
+- if defined? @movie
+  %h2 "#{@movie.title}" was deleted!
+- else
+  %h2 The movie didn't exist, so I can't delete it. :(
+  
+= link_to 'Back to movie list', movies_path
