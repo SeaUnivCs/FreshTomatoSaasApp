@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-FreshTomato::Application.config.secret_key_base = 'b3eda03d865093ded63b90abeb2191c25e0a51cde270d6e05cd35c7d003a45f0fae07e94631a0b4adcea9cd91b06f4b55eb5736b23e8567acbc1fd230804d8ca'
+FreshTomato::Application.config.secret_key_base = '9875b01814347290ccb24ffe802c34bb0db1bb882e449139c7b19ef865430fd18a50dc6e9186c82ace28a519c52ea57acb1c08755c6f6fa7529e8fe560568204'
