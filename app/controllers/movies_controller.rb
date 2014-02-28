@@ -22,6 +22,13 @@ class MoviesController < ApplicationController
 		@movie = Movie.find(params[:id])
 	end
 
+	def update
+		@movie = Movie.find(params[:id])
+		@movie.update_attributes!(movie_params)
+		flash[:notice] = "'#{@movie.title}' updated."
+		redirect_to movie_path(@movie)
+	end
+
 	def destroy
 		id = params[:id]
 		@movie = Movie.find(id)
