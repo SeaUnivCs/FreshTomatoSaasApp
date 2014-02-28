@@ -10,8 +10,11 @@ class MoviesController < ApplicationController
 	end
 
 	def create
+		#debugger
+		logger.debug("MoviesController create movie...........>#{params.inspect}")
 		@movie = Movie.create!(movie_params)
-		flash[:notice] = "'#{@movie.title}' created."
+		flash[:notice] = "Movie \"#{@movie.title}\" was successfully created."
+		#instead of create a create view, we'd like to go to the movie list page after created a movie
 		redirect_to movies_path
 	end
 
