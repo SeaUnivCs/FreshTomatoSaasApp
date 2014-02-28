@@ -11,3 +11,89 @@
  *= require_self
  *= require_tree .
  */
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ */
+html, body {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin: 0;
+  padding: 0;
+  background: White;
+  color: Black;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 10pt;
+}
+div#main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: green;
+}
+a {
+  background: transparent;
+  color: blue;
+  text-decoration: underline;
+  font-weight: lighter;
+}
+h1 {
+  color: navy;
+  font-size: 1.5em;
+  font-style: normal;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid Blue;
+}
+h1.title {
+  margin: 0 0 1em;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  font-size: 2em;
+  font-style: normal;
+  text-align: center;
+}
+h2 {
+  color: navy;
+  font-size: 1.5em;
+  font-style: oblique;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid lightblue;
+}
+table#movies {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+table#movies th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: lightgreen;
+}
+table#movies th, table#movies td {
+  padding: 4px;
+  text-align: left;
+}
+div#notice, div#warning {
+  background: yellow;
+  margin: 1em 0;
+  padding: 4px;
+  text-align: center;
+}
+form label {
+  display: block;
+  line-height: 25px;
+  font-weight: lighter;
+  color: darkgreen;
+}

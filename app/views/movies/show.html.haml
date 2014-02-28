@@ -1,5 +1,6 @@
-- if defined? @movie
-  %h2 Details about "#{@movie.title}"
+-# if defined? @movie -#handle error case
+- if @movie != nil
+  %h1 Details about "#{@movie.title}"
   %ul#details
     %li
       Title:
@@ -12,9 +13,17 @@
       = @movie.release_date.strftime("%B %d, %Y")
   %h4 Description:
   %p#description= @movie.description
-  %hr
-  %p= link_to "[Delete \"#{@movie.title}\"]", movie_path(@movie), :method => :delete, confirm: "are you sure?"
 - else
   %h2 No movie detail info
-  
+%br/
+%br/
+= button_to '   Edit this movie   ', edit_movie_path(@movie), :method => :get
+%br/
+= button_to 'Delete this movie', movie_path(@movie), :method => :delete, :confirm => "Are you sure that you want to delete movie \"#{@movie.title}\" ?"
+%br/
+%br/
 = link_to 'Back to movie list', movies_path
+-# debugging
+/%h5
+/  =debug(@movie)
+/  =@movie.inspect
