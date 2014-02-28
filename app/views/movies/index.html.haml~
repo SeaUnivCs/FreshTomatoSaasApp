@@ -15,4 +15,6 @@
         %td= movie.rating
         %td= movie.release_date
         %td= link_to "Click to see the details of \"#{movie.title}\" ...", movie_path(movie)
-        %td= link_to "Delete", {:action => 'destroy', :id => movie.id}, :confirm => "Are you sure you want to delete \"#{movie.title}\" ?"
+
+= link_to 'Add a new movie', new_movie_path
+
