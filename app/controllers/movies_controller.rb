@@ -11,5 +11,7 @@ class MoviesController < ApplicationController
 	def destroy
 		@movie = Movie.destroy(params[:id])
 		logger.debug("MoviesController Destroy =================== #{params.inspect}")
+		flash[:notice] = "#{@movie.title} was deleted!"
+		redirect_to movies_path
 	end
 end

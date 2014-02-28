@@ -44,26 +44,34 @@
 	"buffers":
 	[
 		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 170,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/views/movies/index.html.haml",
 			"settings":
 			{
-				"buffer_size": 358,
+				"buffer_size": 494,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/movies/show.html.haml",
+			"file": "app/views/layouts/application.html.haml",
 			"settings":
 			{
-				"buffer_size": 402,
+				"buffer_size": 353,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "db/migrate/20140226024421_create_movies.rb",
+			"file": "app/views/movies/destroy.html.haml",
 			"settings":
 			{
-				"buffer_size": 246,
+				"buffer_size": 166,
 				"line_ending": "Unix"
 			}
 		},
@@ -71,7 +79,7 @@
 			"file": "app/controllers/movies_controller.rb",
 			"settings":
 			{
-				"buffer_size": 323,
+				"buffer_size": 460,
 				"line_ending": "Unix"
 			}
 		}
@@ -79,9 +87,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 263.0,
+		"height": 375.0,
 		"selected_items":
 		[
+			[
+				"git ",
+				"Git: Diff"
+			],
 			[
 				"git comm",
 				"Git: Commit"
@@ -95,7 +107,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 435.0
+		"width": 516.0
 	},
 	"console":
 	{
@@ -116,13 +128,17 @@
 	},
 	"file_history":
 	[
+		"/home/dgleason/dev/workspace/cpsc592/freshTomato/app/views/movies/show.html.haml",
+		"/home/dgleason/dev/workspace/cpsc592/freshTomato/Gemfile",
+		"/home/dgleason/dev/workspace/cpsc592/freshTomato/config/routes.rb",
+		"/home/dgleason/dev/workspace/cpsc592/freshTomato/db/migrate/20140226024421_create_movies.rb",
+		"/home/dgleason/dev/workspace/cpsc592/freshTomato/public/Index.html",
+		"/home/dgleason/dev/workspace/cpsc592/freshTomato/app/movies_controller.rb.backup",
+		"/home/dgleason/dev/workspace/cpsc592/freshTomato/public/Index.html~",
 		"/home/dgleason/dev/workspace/cpsc592/freshTomato/log/development.log",
 		"/home/dgleason/dev/workspace/cpsc592/freshTomato/app/views/layouts/application.html.haml",
 		"/home/dgleason/dev/workspace/cpsc592/freshTomato/app/controllers/application_controller.rb",
-		"/home/dgleason/dev/workspace/cpsc592/freshTomato/config/routes.rb",
 		"/home/dgleason/dev/workspace/cpsc592/freshTomato/app/views/movies/index.html.haml",
-		"/home/dgleason/dev/workspace/cpsc592/freshTomato/app/views/movies/show.html.haml",
-		"/home/dgleason/dev/workspace/cpsc592/freshTomato/db/migrate/20140226024421_create_movies.rb",
 		"/home/dgleason/dev/workspace/cpsc592/freshTomato/app/controllers/movies_controller.rb",
 		"/home/dgleason/dev/workspace/cpsc592/freshTomato/app/models/movie.rb",
 		"/home/dgleason/dev/workspace/cpsc592/freshTomato/db/migrate/backup.rb",
@@ -132,7 +148,6 @@
 		"/home/dgleason/dev/workspace/cpsc592/freshTomato/db/migrate/20140226023615_this_is_a_test.rb",
 		"/home/dgleason/dev/workspace/cpsc592/freshTomato/db/migrate/20140219023029_create_movies.rb",
 		"/home/dgleason/dev/workspace/cpsc592/freshTomato/app/views/movies/index.html.erb",
-		"/home/dgleason/dev/workspace/cpsc592/freshTomato/Gemfile",
 		"/home/dgleason/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/dgleason/dev/workspace/graduate_project/.gitignore",
 		"/home/dgleason/dev/workspace/graduate_project/src/python/glGraphicsWidget.py",
@@ -189,28 +204,117 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/movies/index.html.haml",
+					"file": "public/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 358,
+						"buffer_size": 170,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								358,
-								358
+								65,
+								65
 							]
 						],
 						"settings":
 						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/movies/index.html.haml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 494,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								283,
+								283
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/layouts/application.html.haml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 353,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/movies/destroy.html.haml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
 							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -223,91 +327,32 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app/views/movies/show.html.haml",
+					"buffer": 4,
+					"file": "app/controllers/movies_controller.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 402,
+						"buffer_size": 460,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								178,
-								178
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "db/migrate/20140226024421_create_movies.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 246,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								44,
-								44
+								455,
+								455
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/controllers/movies_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 323,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								274,
-								274
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -319,7 +364,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 36.0
 	},
 	"layout":
 	{
