@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #e8ecf0;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+div#main {
+  width:960px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+}
+a {
+  text-decoration: none;
+  color: #a28351;
+}
+a:hover {
+  font-style: italic;
+  color: #182e4f;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+}
+h1 {
+  color: #182e4f;
+  font-size: 150%;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+}
+h1.title {
+  background: #182e4f;
+  color: #fff;
+  margin-bottom: 1em;
+  padding: 12px 0 16px;
+  font-size: 2em;
+  text-align: center;
+  border-bottom: 4px solid gold;
+}
+table#movies {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 2px solid #000;
+}
+table#movies th {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: #F5E8D0;
+}
+table#movies th, table#movies td {
+  padding: 4px;
+  text-align: left;
+}
+#notice, #warning {
+  margin: 1em 0;
+  padding: 4px;
+}
+#notice {
+  background: #F1F8EB;
+  border:1px solid #7AC142;
+}
+#warning {
+  background: #FFC0CB;
+  border:1px solid red;
+}
+form label {
+  display: block;
+  line-height: 25px;
+  font-weight: bold;
+  color: #182e4f;
+}
+input[type="text"] {
+  width: 300px;
+}
+input[type="submit"] {
+  display: block;
+}
+#footer-links {
+  margin-top: 1.5em;
+}
+#footer-links a {
+  padding-right: 10px;
+}

@@ -1,0 +1,22 @@
+-# _movie_form.html.haml
+-# Partial to render movie form
+
+-# Output error messages if they occur
+- unless @movie.errors.empty?
+  #warning
+    Errors prevented this movie from being #{controller.action_name}d:
+    %ul
+      - @movie.errors.full_messages.each do |error|
+        %li= error
+
+= label :movie, :title, 'Title'
+= text_field :movie, 'title'
+
+= label :movie, :rating, 'Rating'
+= select :movie, :rating, Movie.all_ratings
+
+= label :movie, :release_date, 'Released On'
+= date_select :movie, :release_date, {start_year: 40.years.ago.year, end_year: Date.today.year, Default: Date.today}
+
+= label :movie, :description, 'Description'
+= text_field :movie, 'description'
