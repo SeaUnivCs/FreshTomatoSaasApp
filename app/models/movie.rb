@@ -1,4 +1,6 @@
 class Movie < ActiveRecord::Base
+  before_save :cleanup_title
+
   # Returns an array containing allowed  values for ratings
   def self.all_ratings ; %w[G PG PG-13 R NC-17] ; end
 
@@ -22,5 +24,12 @@ class Movie < ActiveRecord::Base
   @@grandfathered_date = Date.parse('1 Nov 1968')
   def grandfathered?
     release_date && release_date >= @@grandfathered_date
+  end
+
+  # For :title, capitalize the first letter of each word, remove extra white
+  # spaces.
+  def cleanup_title
+    self.title = self.title.split(/\s+/).map(&:downcase).
+      map(&:capitalize).join(' ').strip
   end
 end
