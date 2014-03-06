@@ -1,9 +1,9 @@
 class Movie < ActiveRecord::Base
+  before_validation :cleanup_title
   # Returns an array containing allowed  values for ratings
   def self.all_ratings ; %w[G PG PG-13 R NC-17] ; end
 
   # Validate model fields
-  validate :cleanup_title
   validates :title, :presence => true, :length => {minimum: 3}, 
     :uniqueness => true
   validates :release_date, :presence => true
