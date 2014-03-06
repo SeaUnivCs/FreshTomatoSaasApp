@@ -15,12 +15,12 @@ div#main {
 }
 a {
   background: transparent;
-  color: maroon;
+  color: blue;
   text-decoration: underline;
   font-weight: bold;
 }
 h1 {
-  color: maroon;
+  color: black;
   font-size: 150%;
   font-style: italic;
   display: block;
