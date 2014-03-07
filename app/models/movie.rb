@@ -29,7 +29,7 @@ class Movie < ActiveRecord::Base
   # For :title, capitalize the first letter of each word, remove extra white
   # spaces.
   def cleanup_title
-    self.title = self.title.split(/\s+/).map(&:downcase).
-      map(&:capitalize).join(' ').strip
+    self.title = self.title.strip.split(/\s+/).map(&:downcase).
+      map(&:capitalize).join(' ')
   end
 end
