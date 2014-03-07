@@ -3,7 +3,7 @@ class Movie < ActiveRecord::Base
   def self.all_ratings ; %w[G PG PG-13 R NC-17] ; end
 
   # Validate model fields
-  validates :title, :presence => true
+  validates :title, :presence => true, :uniqueness => true, :length => { :minimum => 3 }
   validates :release_date, :presence => true
   validate :released_1930_or_later # uses custom validator below
   validates :rating, :inclusion => {:in => Movie.all_ratings},

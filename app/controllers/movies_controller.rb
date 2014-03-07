@@ -13,6 +13,8 @@ class MoviesController < ApplicationController
   # redirect to movies page on success.
   def create
     @movie = Movie.new(movie_params)
+    temp = @movie.title.squeeze(" ").strip().titleize()
+    @movie.title = temp
     if @movie.save
       flash[:notice] = "#{@movie.title} was successfully created."
       redirect_to movies_path
@@ -37,6 +39,8 @@ class MoviesController < ApplicationController
   # to the movie's page.
   def update
     @movie = Movie.find params[:id]
+    temp = @movie.title.squeeze(" ").strip().titleize()
+    @movie.title = temp
     if @movie.update_attributes(movie_params)
       flash[:notice] = "#{@movie.title} was successfully updated."
       redirect_to movie_path(@movie)
