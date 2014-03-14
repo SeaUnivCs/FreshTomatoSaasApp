@@ -1,5 +1,6 @@
-- if defined? @movie
-  %h2 Details about "#{@movie.title}"
+-# if defined? @movie -#handle error case
+- if @movie != nil
+  %h1 Details about "#{@movie.title}"
   %ul#details
     %li
       Title:
@@ -14,7 +15,15 @@
   %p#description= @movie.description
 - else
   %h2 No movie detail info
-= link_to 'Delete', {action: :destroy, id: @movie.id}, :method=>'delete', :data => {confirm: 'Are you sure?'} 
+%br/
+%br/
+= button_to '   Edit this movie   ', edit_movie_path(@movie), :method => :get
+%br/
+= button_to 'Delete this movie', movie_path(@movie), :method => :delete, :confirm => "Are you sure that you want to delete movie \"#{@movie.title}\" ?"
+%br/
+%br/
 = link_to 'Back to movie list', movies_path
-
-
+-# debugging
+/%h5
+/  =debug(@movie)
+/  =@movie.inspect

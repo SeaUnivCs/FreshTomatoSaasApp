@@ -14,7 +14,7 @@
   %p#description= @movie.description
 - else
   %h2 No movie detail info
-= link_to 'Delete', {action: :destroy, id: @movie.id}, :method=>'delete' 
+= link_to 'Delete', {action: :destroy, id: @movie.id}, :method=>'delete', :data => {confirm: 'Are you sure?'} 
 = link_to 'Back to movie list', movies_path
 
 
