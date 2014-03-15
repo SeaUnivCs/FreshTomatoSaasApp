@@ -9,6 +9,8 @@ gem 'sqlite3'
 end
 group :production do
 gem 'pg'
+config.server_static_assets = true
+config.assets.compile = true
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
