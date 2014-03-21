@@ -13,6 +13,8 @@
       = @movie.release_date.strftime("%B %d, %Y")
   %h4 Description:
   %p#description= @movie.description
+  %h4 Profile Pic:
+  =image_tag @movie.pic.url
 - else
   %h2 No movie detail info
 %br/
@@ -24,6 +26,6 @@
 %br/
 = link_to 'Back to movie list', movies_path
 -# debugging
-/%h5
-/  =debug(@movie)
-/  =@movie.inspect
+%h5
+  =debug(@movie)
+  =@movie.inspect
