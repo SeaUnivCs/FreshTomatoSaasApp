@@ -14,7 +14,7 @@
   %h4 Description:
   %p#description= @movie.description
   %h4 Profile Pic:
-  =image_tag @movie.pic.url
+  =image_tag @movie.pic.url(:thumb)
 - else
   %h2 No movie detail info
 %br/

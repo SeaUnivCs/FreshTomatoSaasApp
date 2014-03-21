@@ -82,9 +82,9 @@ FreshTomato::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['freshtomato'],
-      :access_key_id => ENV['AKIAJWFYDWFXWXKZSCIA'],
-      :secret_access_key => ENV['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']
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
    }
  } 
 end
