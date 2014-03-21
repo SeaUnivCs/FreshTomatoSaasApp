@@ -1,6 +1,9 @@
 class Movie < ActiveRecord::Base
  validates :title, :presence => true, :uniqueness => true
  validates :title, length: {minimum: 3}
+ validates :title, length: {maximum: 20}
+ validates :description, length: {maximum:50}
+ 
 
   before_validation :capitalize_title
   def capitalize_title
