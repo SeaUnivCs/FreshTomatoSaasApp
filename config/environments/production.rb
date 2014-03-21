@@ -78,4 +78,12 @@ FreshTomato::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  # s3
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['freshtomato'],
+      :access_key_id => ENV['AKIAJWFYDWFXWXKZSCIA'],
+      :secret_access_key => ENV['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']
+   }
 end

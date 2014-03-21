@@ -62,3 +62,7 @@ gem 'database_cleaner'
 gem 'cucumber-rails-training-wheels', :group => :test
 
 gem 'paperclip', '~>3.5.0'
+
+gem 'aws-sdk'
+
+gem 's3_direct_upload'
