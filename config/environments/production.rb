@@ -86,4 +86,5 @@ FreshTomato::Application.configure do
       :access_key_id => ENV['AKIAJWFYDWFXWXKZSCIA'],
       :secret_access_key => ENV['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']
    }
+ } 
 end
