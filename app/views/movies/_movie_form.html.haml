@@ -1,3 +1,4 @@
+= form_tag(@movie, :multipart => true) do
 = label :movie, :title, 'Title'
 = text_field :movie, :title
 %br/
@@ -12,7 +13,6 @@
 = text_field :movie, :description
 %br/
 %b Picture
-= file_field :pic 
+= file_field :movie, :pic 
 %br/
-
 %br/
