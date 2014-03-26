@@ -1,8 +1,0 @@
-development:
-  access_key_id: "AKIAJWFYDWFXWXKZSCIA"
-  secret_access_key: "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" 
-  bucket: "freshtomato"
-production:
-  access_key_id: "AKIAJWFYDWFXWXKZSCIA"
-  secret_access_key: "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"
-  bucket: "freshtomato"
